@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliança K Engenharia | Excelência em Obras e Prevenção</title>
+    <meta name="description" content="A Aliança K Engenharia integra projetos eficientes e execução especializada. Unimos técnica, viabilidade e segurança para garantir durabilidade em cada obra.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="no-scroll">
+    
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <button id="skip-splash" class="skip-splash-btn">Pular Animação <i class="fas fa-forward"></i></button>
+        <div class="splash-content">
+            <div id="splash-text" class="splash-text-container">
+                <span class="splash-line-1">Um novo conceito em</span>
+                <span class="splash-line-2">Reforma Predial</span>
+                <span class="splash-line-3">na Grande Florianópolis</span>
+            </div>
+            <div id="splash-logo" class="splash-logo">
+                <img src="assets/logo.png" alt="Aliança K Engenharia" class="splash-img-logo">
+                <div class="logo-text">
+                    <span class="logo-title splash-title">Aliança K</span>
+                    <span class="logo-subtitle splash-subtitle">Engenharia</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Aliança K Engenharia" class="nav-img-logo">
+                <div class="logo-text">
+                    <span class="logo-title">Aliança K</span>
+                    <span class="logo-subtitle">Engenharia</span>
+                </div>
+            </a>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Nossos Serviços</a></li>
+                <li><a href="#portfolio">Nossos Clientes</a></li>
+                <li><a href="#contato" class="btn btn-outline">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text animate-fade-up">
+                <h1>Reforma predial<br>além da estética</h1>
+                <p>A Aliança K Engenharia integra projetos eficientes e execução especializada. Unimos técnica, viabilidade e segurança para garantir durabilidade em cada obra.</p>
+                <div class="hero-buttons">
+                    <a href="#contato" class="btn btn-primary">Entre em contato <i class="fas fa-arrow-right"></i></a>
+                    <a href="#portfolio" class="btn btn-secondary">Ver Portfólio</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Role para baixo</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Raio-X Section -->
+    <section class="raiox-section section-padding bg-dark" id="raiox">
+        <div class="container">
+            <div class="section-header center animate-fade-up">
+                <span class="subtitle" style="color: var(--primary-light);">Engenharia Diagnóstica</span>
+                <h2 style="color: white;">Raio-X da Edificação</h2>
+                <p style="color: var(--text-light);">Entenda os pontos críticos que nossos engenheiros avaliam para garantir a segurança e a vida útil do seu patrimônio.</p>
+            </div>
+
+            <div class="raiox-container">
+                <!-- Blueprint Building representation -->
+                <div class="building-blueprint animate-fade-up">
+                    <svg class="building-svg" viewBox="0 0 380 560" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="facadeGrad" x1="0" y1="0" x2="1" y2="0.15">
+                          <stop offset="0%" stop-color="#1c2d47"/>
+                          <stop offset="55%" stop-color="#182842"/>
+                          <stop offset="100%" stop-color="#0d1729"/>
+                        </linearGradient>
+                        <linearGradient id="sideFacadeGrad" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0%" stop-color="#0a1424"/>
+                          <stop offset="100%" stop-color="#060d18"/>
+                        </linearGradient>
+                        <linearGradient id="roofTopGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#2a3c5e"/>
+                          <stop offset="100%" stop-color="#15233c"/>
+                        </linearGradient>
+                        <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0%" stop-color="#2a4468"/>
+                          <stop offset="55%" stop-color="#152238"/>
+                          <stop offset="100%" stop-color="#0b1526"/>
+                        </linearGradient>
+                        <linearGradient id="tankGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#3a4c70"/>
+                          <stop offset="100%" stop-color="#212f4a"/>
+                        </linearGradient>
+                        <filter id="concreteTexture" x="-5%" y="-5%" width="110%" height="110%">
+                          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" seed="7"/>
+                          <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
+                        </filter>
+                      </defs>
+                
+                      <ellipse cx="185" cy="530" rx="150" ry="11" fill="#000" opacity="0.4"/>
+                
+                      <rect x="15" y="522" width="350" height="14" fill="#0e1526"/>
+                      <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+                        <line x1="45" y1="522" x2="45" y2="536"/>
+                        <line x1="90" y1="522" x2="90" y2="536"/>
+                        <line x1="300" y1="522" x2="300" y2="536"/>
+                        <line x1="335" y1="522" x2="335" y2="536"/>
+                      </g>
+                      <line x1="330" y1="522" x2="330" y2="470" stroke="#1c2740" stroke-width="3"/>
+                      <circle cx="330" cy="466" r="6" fill="#f2c14e" opacity="0.55"/>
+                      <rect x="20" y="512" width="26" height="10" rx="2" fill="#1c2740"/>
+                      <circle cx="33" cy="500" r="12" fill="#1f3a2e"/>
+                      <circle cx="24" cy="504" r="9" fill="#20402f"/>
+                      <circle cx="42" cy="504" r="9" fill="#1a3327"/>
+                
+                      <polygon points="264,95 322,72 322,500 264,522" fill="url(#sideFacadeGrad)" stroke="#0a1424" stroke-width="1.5"/>
+                
+                      <line x1="304" y1="105" x2="311" y2="490" stroke="#1c2d47" stroke-width="4" stroke-linecap="round"/>
+                      <circle cx="305" cy="185" r="4.5" fill="#243458"/>
+                      <circle cx="307" cy="300" r="4.5" fill="#243458"/>
+                      <circle cx="309" cy="415" r="4.5" fill="#243458"/>
+                
+                      <g transform="matrix(1,-0.379,0,1,0,101.6)">
+                        <rect class="win-side" x="275" y="108" width="20" height="38" rx="1.5"/>
+                        <rect class="win-side win-lit" x="275" y="182" width="20" height="38" rx="1.5"/>
+                        <rect class="win-side" x="275" y="256" width="20" height="38" rx="1.5"/>
+                        <rect class="win-side win-lit-blue" x="275" y="330" width="20" height="38" rx="1.5"/>
+                        <rect class="win-side" x="275" y="404" width="20" height="38" rx="1.5"/>
+                        <rect class="win-side" x="275" y="466" width="20" height="36" rx="1.5"/>
+                      </g>
+                
+                      <polygon points="264,86 322,64 322,72 264,95" fill="#0a1424"/>
+                
+                      <rect x="60" y="95" width="204" height="427" rx="2" fill="url(#facadeGrad)" stroke="#233a5e" stroke-width="1.5"/>
+                      <rect x="60" y="95" width="204" height="427" rx="2" fill="url(#facadeGrad)" filter="url(#concreteTexture)"/>
+                
+                      <polygon points="60,95 264,95 322,72 118,72" fill="url(#roofTopGrad)" stroke="#233a5e" stroke-width="1"/>
+                      <rect x="58" y="87" width="208" height="9" fill="#101f38"/>
+                
+                      <rect x="100" y="76" width="34" height="18" rx="2" fill="#182842" stroke="#0a1424"/>
+                      <rect x="165" y="50" width="38" height="30" rx="3" fill="url(#tankGrad)" stroke="#0a1424"/>
+                      <rect x="165" y="47" width="38" height="8" rx="4" fill="#39496e"/>
+                      <line x1="228" y1="70" x2="228" y2="22" stroke="#26385c" stroke-width="2.5"/>
+                      <line x1="218" y1="34" x2="238" y2="34" stroke="#26385c" stroke-width="2"/>
+                      <line x1="220" y1="46" x2="236" y2="46" stroke="#26385c" stroke-width="2"/>
+                      <circle class="beacon" cx="228" cy="20" r="3" fill="#ff4d4d"/>
+                
+                      <g stroke="#233a5e" stroke-width="1">
+                        <line x1="60" y1="167" x2="264" y2="167"/>
+                        <line x1="60" y1="239" x2="264" y2="239"/>
+                        <line x1="60" y1="311" x2="264" y2="311"/>
+                        <line x1="60" y1="383" x2="264" y2="383"/>
+                        <line x1="60" y1="450" x2="264" y2="450"/>
+                      </g>
+                      <g stroke="rgba(0,180,216,0.08)" stroke-width="1">
+                        <line x1="112" y1="95" x2="112" y2="450"/>
+                        <line x1="168" y1="95" x2="168" y2="450"/>
+                        <line x1="212" y1="95" x2="212" y2="450"/>
+                      </g>
+                
+                      <rect class="win-front" x="75" y="110" width="38" height="42" rx="2"/>
+                      <rect class="win-front win-lit" x="145" y="110" width="38" height="42" rx="2"/>
+                      <rect class="win-front win-lit-blue" x="211" y="110" width="38" height="42" rx="2"/>
+                
+                      <rect class="win-front win-lit-blue" x="75" y="182" width="38" height="42" rx="2"/>
+                      <rect class="win-front" x="145" y="182" width="38" height="42" rx="2"/>
+                      <rect class="win-front win-lit win-flicker" x="211" y="182" width="38" height="42" rx="2"/>
+                      <rect x="56" y="231" width="212" height="7" rx="1.5" fill="#0d1729" stroke="#060d18"/>
+                      <g stroke="rgba(0,180,216,0.35)" stroke-width="1">
+                        <line x1="60" y1="215" x2="60" y2="231"/>
+                        <line x1="80" y1="215" x2="80" y2="231"/>
+                        <line x1="100" y1="215" x2="100" y2="231"/>
+                        <line x1="120" y1="215" x2="120" y2="231"/>
+                        <line x1="140" y1="215" x2="140" y2="231"/>
+                        <line x1="160" y1="215" x2="160" y2="231"/>
+                        <line x1="180" y1="215" x2="180" y2="231"/>
+                        <line x1="200" y1="215" x2="200" y2="231"/>
+                        <line x1="220" y1="215" x2="220" y2="231"/>
+                        <line x1="240" y1="215" x2="240" y2="231"/>
+                        <line x1="260" y1="215" x2="260" y2="231"/>
+                        <line x1="56" y1="215" x2="268" y2="215"/>
+                      </g>
+                
+                      <rect class="win-front win-lit" x="75" y="254" width="38" height="42" rx="2"/>
+                      <rect class="win-front" x="145" y="254" width="38" height="42" rx="2"/>
+                      <rect class="win-front" x="211" y="254" width="38" height="42" rx="2"/>
+                      <rect class="ac-unit" x="219" y="298" width="30" height="11" rx="1.5"/>
+                
+                      <rect class="win-front" x="75" y="326" width="38" height="42" rx="2"/>
+                      <rect class="win-front win-lit-blue" x="145" y="326" width="38" height="42" rx="2"/>
+                      <rect class="win-front win-lit" x="211" y="326" width="38" height="42" rx="2"/>
+                      <rect x="56" y="375" width="212" height="7" rx="1.5" fill="#0d1729" stroke="#060d18"/>
+                      <g stroke="rgba(0,180,216,0.35)" stroke-width="1">
+                        <line x1="60" y1="359" x2="60" y2="375"/>
+                        <line x1="80" y1="359" x2="80" y2="375"/>
+                        <line x1="100" y1="359" x2="100" y2="375"/>
+                        <line x1="120" y1="359" x2="120" y2="375"/>
+                        <line x1="140" y1="359" x2="140" y2="375"/>
+                        <line x1="160" y1="359" x2="160" y2="375"/>
+                        <line x1="180" y1="359" x2="180" y2="375"/>
+                        <line x1="200" y1="359" x2="200" y2="375"/>
+                        <line x1="220" y1="359" x2="220" y2="375"/>
+                        <line x1="240" y1="359" x2="240" y2="375"/>
+                        <line x1="260" y1="359" x2="260" y2="375"/>
+                        <line x1="56" y1="359" x2="268" y2="359"/>
+                      </g>
+                
+                      <rect class="win-front" x="75" y="398" width="38" height="42" rx="2"/>
+                      <rect class="win-front win-lit" x="145" y="398" width="38" height="42" rx="2"/>
+                      <rect class="win-front" x="211" y="398" width="38" height="42" rx="2"/>
+                      <rect class="ac-unit" x="73" y="442" width="30" height="11" rx="1.5"/>
+                
+                      <rect x="70" y="462" width="184" height="58" fill="url(#glassGrad)" stroke="#233a5e" stroke-width="1.5"/>
+                      <rect x="55" y="453" width="214" height="9" fill="#00B4D8" opacity="0.85"/>
+                      <line x1="72" y1="453" x2="72" y2="520" stroke="#0a1424" stroke-width="2"/>
+                      <line x1="252" y1="453" x2="252" y2="520" stroke="#0a1424" stroke-width="2"/>
+                      <rect x="142" y="466" width="18" height="54" fill="#0a1424" stroke="#233a5e"/>
+                      <rect x="160" y="466" width="18" height="54" fill="#0a1424" stroke="#233a5e"/>
+                      <line x1="151" y1="466" x2="151" y2="520" stroke="#00B4D8" stroke-width="1.5" opacity="0.5"/>
+                      <line x1="169" y1="466" x2="169" y2="520" stroke="#00B4D8" stroke-width="1.5" opacity="0.5"/>
+                
+                      <rect class="elec-box" x="42" y="480" width="18" height="26" rx="1"/>
+                      <rect x="42" y="480" width="18" height="4" fill="#f2c14e"/>
+                
+                      <rect class="fire-box" x="272" y="480" width="16" height="30" rx="1"/>
+                      <line x1="280" y1="486" x2="280" y2="504" stroke="#ff8080" stroke-width="1.5"/>
+                    </svg>
+                
+                    <div class="hotspot" data-target="info-cobertura" style="top: 6%; left: 54%;">
+                        <div class="pulse"></div>
+                    </div>
+                    <div class="hotspot" data-target="info-fachada" style="top: 30%; left: 20%;">
+                        <div class="pulse"></div>
+                    </div>
+                    <div class="hotspot" data-target="info-estrutura" style="top: 52%; left: 38%;">
+                        <div class="pulse"></div>
+                    </div>
+                    <div class="hotspot" data-target="info-hidrossanitario" style="top: 58%; left: 73%;">
+                        <div class="pulse"></div>
+                    </div>
+                    <div class="hotspot" data-target="info-eletrica" style="top: 85%; left: 12%;">
+                        <div class="pulse"></div>
+                    </div>
+                    <div class="hotspot" data-target="info-incendio" style="top: 85%; left: 65%;">
+                        <div class="pulse"></div>
+                    </div>
+                </div>
+
+                <!-- Info Panels -->
+                <div class="raiox-info-panel animate-fade-left">
+                    <div class="info-card active" id="info-default">
+                        <h3><i class="fas fa-search"></i> Passe o mouse</h3>
+                        <p>Interaja com os pontos pulsantes no diagrama ao lado para descobrir as principais etapas da nossa análise predial.</p>
+                    </div>
+                    <div class="info-card" id="info-cobertura">
+                        <img src="assets/images/raiox/cobertura.png" alt="Inspeção de Cobertura" style="width:100%; border-radius:4px; margin-bottom:1rem; object-fit:cover; height: 120px;">
+                        <h3>Cobertura</h3>
+                        <p>Verificação de telhados, impermeabilização e calhas. Prevenimos infiltrações severas que podem comprometer toda a estrutura abaixo.</p>
+                    </div>
+                    <div class="info-card" id="info-fachada">
+                        <img src="assets/images/raiox/fachada.png" alt="Inspeção de Fachada" style="width:100%; border-radius:4px; margin-bottom:1rem; object-fit:cover; height: 120px;">
+                        <h3>Fachada</h3>
+                        <p>Inspeção de revestimentos, estanqueidade e patologias externas. Garantimos a estética e a proteção térmica e contra intempéries.</p>
+                    </div>
+                    <div class="info-card" id="info-estrutura">
+                        <img src="assets/images/raiox/estrutura.png" alt="Inspeção de Estrutura" style="width:100%; border-radius:4px; margin-bottom:1rem; object-fit:cover; height: 120px;">
+                        <h3>Estrutura</h3>
+                        <p>Avaliação de fissuras, deformações e condições de segurança. O coração do edifício deve estar sempre robusto e íntegro.</p>
+                    </div>
+                    <div class="info-card" id="info-hidrossanitario">
+                        <img src="assets/images/raiox/hidrossanitario.png" alt="Inspeção Hidrossanitária" style="width:100%; border-radius:4px; margin-bottom:1rem; object-fit:cover; height: 120px;">
+                        <h3>Hidrossanitário</h3>
+                        <p>Análise de tubulações, infiltrações invisíveis e reservatórios. Essencial para evitar desperdícios e danos colaterais a outros sistemas.</p>
+                    </div>
+                    <div class="info-card" id="info-eletrica">
+                        <img src="assets/images/raiox/eletrica.png" alt="Inspeção Elétrica" style="width:100%; border-radius:4px; margin-bottom:1rem; object-fit:cover; height: 120px;">
+                        <h3>Elétrica</h3>
+                        <p>Verificação de instalações, quadros de força e conformidade técnica. Mitigamos riscos de curtos-circuitos e incêndios.</p>
+                    </div>
+                    <div class="info-card" id="info-incendio">
+                        <img src="assets/images/raiox/incendio.png" alt="Inspeção de Prevenção de Incêndio" style="width:100%; border-radius:4px; margin-bottom:1rem; object-fit:cover; height: 120px;">
+                        <h3>Prevenção de Incêndio</h3>
+                        <p>Avaliação de sistemas de alarme, rotas de fuga e PPCI. Segurança total e conformidade com as exigências dos Bombeiros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="sobre section-padding" id="sobre">
+        <div class="container">
+            <div class="sobre-grid">
+                <div class="sobre-image animate-fade-right">
+                    <div class="image-wrapper">
+                        <img src="assets/images/engineers.png" alt="Engenheiras da Aliança K">
+                        <div class="experience-badge">
+                            <span class="badge-number">Engenharia</span>
+                            <span class="badge-text">Feminina</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-content animate-fade-left">
+                    <div class="section-header">
+                        <span class="subtitle">Quem Somos</span>
+                        <h2>Aliança K Engenharia</h2>
+                    </div>
+                    <p class="lead">Projetamos com técnica, lideramos com propósito e construímos com excelência.</p>
+                    <p>Somos uma empresa dedicada a entregar resultados que vão além da expectativa. Com um foco forte em segurança, prevenção e excelência técnica, a Aliança K Engenharia transforma projetos no papel em realidade sólida e segura.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Excelência em segurança e prevenção</li>
+                        <li><i class="fas fa-check-circle"></i> Equipe altamente capacitada</li>
+                        <li><i class="fas fa-check-circle"></i> Atendimento personalizado para cada obra</li>
+                    </ul>
+                    
+                    <a href="#servicos" class="btn btn-text">Conheça nossos serviços <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section class="servicos section-padding bg-light" id="servicos">
+        <div class="container">
+            <div class="section-header center animate-fade-up">
+                <span class="subtitle">O Que Fazemos</span>
+                <h2>Nossas Especialidades</h2>
+                <p>Oferecemos um portfólio completo de serviços de engenharia para garantir o sucesso e a segurança da sua obra do início ao fim.</p>
+            </div>
+
+            <div class="servicos-grid">
+                <!-- Serviço 1 -->
+                <div class="servico-card animate-fade-up" style="animation-delay: 0.1s;">
+                    <div class="servico-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Projetos Técnicos</h3>
+                    <p>Desenvolvimento de projetos arquitetônicos, elétricos, hidrossanitários e estruturais completos, com foco na viabilidade e eficiência.</p>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="servico-card animate-fade-up" style="animation-delay: 0.2s;">
+                    <div class="servico-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h3>Engenharia Diagnóstica</h3>
+                    <p>Elaboração de laudos técnicos detalhados e diagnósticos precisos para identificar patologias e garantir a saúde estrutural da sua edificação.</p>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="servico-card animate-fade-up" style="animation-delay: 0.3s;">
+                    <div class="servico-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h3>Prevenção de Incêndio</h3>
+                    <p>Projetos Preventivos Contra Incêndio (PPCI). Segurança não é detalhe, é prioridade. Adequamos sua edificação às normas exigidas.</p>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="servico-card animate-fade-up" style="animation-delay: 0.4s;">
+                    <div class="servico-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Assessoria e Fiscalização</h3>
+                    <p>Acompanhamento da pré-entrega de obra, assessoria técnica especializada e fiscalização rigorosa para evitar retrabalho e desperdício.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeos Instagram Section -->
+    <section class="videos-section section-padding" id="midia">
+        <div class="container">
+            <div class="section-header center animate-fade-up">
+                <span class="subtitle">Acompanhe Nossas Obras</span>
+                <h2>Na Prática</h2>
+                <p>Acompanhe o dia a dia da Aliança K Engenharia através de nossos conteúdos nas redes sociais.</p>
+            </div>
+
+            <div class="videos-grid">
+                <!-- Video 1 -->
+                <div class="video-row animate-fade-up">
+                    <div class="video-container">
+                        <iframe src="https://www.instagram.com/p/Da0dZuLxCeb/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-text">
+                        <h3>Projeto: Investimento, não obrigação</h3>
+                        <p>Muitos enxergam o projeto de engenharia apenas como uma burocracia exigida pela prefeitura. Neste vídeo, explicamos por que um bom projeto é, na verdade, o melhor investimento para garantir a segurança, economia e a viabilidade técnica da sua obra, evitando surpresas desagradáveis e custos desnecessários.</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-row reverse animate-fade-up">
+                    <div class="video-container">
+                        <iframe src="https://www.instagram.com/p/DbJBeeIx8YL/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-text">
+                        <h3>Reforma Predial Especializada</h3>
+                        <p>A reforma de um prédio exige cuidados extremos para não comprometer a estrutura existente nem a rotina dos moradores. Mostramos aqui os bastidores de mais um desafio superado, aplicando as melhores técnicas de execução e gestão para entregar excelência dentro do prazo estipulado.</p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-row animate-fade-up">
+                    <div class="video-container">
+                        <iframe src="https://www.instagram.com/p/DbTbtxLR4qM/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="video-text">
+                        <h3>Fiscalização no coração de Florianópolis</h3>
+                        <p>Uma nova obra sob nossa responsabilidade no centro de Florianópolis. A fiscalização rigorosa é fundamental para assegurar que cada etapa siga o projeto à risca e atenda às normas técnicas. Nossa presença diária garante a qualidade e a segurança que obras de alto impacto necessitam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+            <div class="section-header center animate-fade-up">
+                <h2>Projetos</h2>
+            </div>
+
+        </div> <!-- Fechar container para permitir largura total -->
+
+        <div class="projetos-showcase slider-container">
+            <button class="slider-arrow prev-arrow" id="prev-projeto"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="slider-track" id="projetos-slider">
+                <!-- Projeto 1 -->
+                <div class="projeto-slide">
+                    <div class="projeto-row">
+                        <div class="projeto-img">
+                            <img src="assets/Condominio-Edificio-American-Residence-Biguacu_SC.jpg" alt="Residencial American Residence">
+                        </div>
+                        <div class="projeto-text">
+                            <h3>Residencial American Residence</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Biguaçu - SC</p>
+                            <h4>Pintura Externa</h4>
+                            <p class="projeto-desc">Revitalização completa de fachada com tratamento prévio das superfícies, correção de fissuras e aplicação de sistema de pintura acrílica de alta resistência, garantindo proteção contra ação climática e valorização visual do empreendimento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="projeto-slide">
+                    <div class="projeto-row">
+                        <div class="projeto-img">
+                            <img src="assets/Condominio-Edificio-Gryzyella-Sao-Jose_SC.jpg" alt="Edifício Gryzyella">
+                        </div>
+                        <div class="projeto-text">
+                            <h3>Edifício Gryzyella</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> São José - SC</p>
+                            <h4>Fiscalização de Reforma Predial e Recuperação Estrutural</h4>
+                            <p class="projeto-desc">A reforma predial contou com fiscalização técnica completa, com foco na recuperação estrutural, revitalização das fachadas e adequação às normas de segurança e acessibilidade. Foram tratadas áreas com descolamento de concreto e oxidação das armaduras, além de executados serviços de calafetação, recomposição de reboco, impermeabilização, pintura interna e externa, revitalização de garagens e adequações nas áreas comuns.</p>
+                            <p class="projeto-desc">A obra também atendeu rigorosamente às exigências de Segurança do Trabalho, com aplicação da NR 35, uso controlado de EPIs, Análise de Riscos, emissão de ART e Relatório de Conformidade. O resultado foi a requalificação técnica e estética da edificação, com maior durabilidade e valorização patrimonial.</p>
+                            <h4 style="margin-top: 1.5rem;">Serviços de Laudo</h4>
+                            <p class="projeto-desc">Foi realizado o laudo de patologia do condomínio, com análise técnica das manifestações patológicas existentes, identificação das causas e definição de recomendações para correção e prevenção de novos problemas, contribuindo para a segurança e durabilidade da edificação.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="projeto-slide">
+                    <div class="projeto-row">
+                        <div class="projeto-img">
+                            <img src="assets/Condominio-Edificio-Serra-Mar-Biguacu_SC.jpg" alt="Edifício Serra Mar">
+                        </div>
+                        <div class="projeto-text">
+                            <h3>Edifício Serra Mar</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Biguaçu - SC</p>
+                            <h4>Pintura Interna e Externa</h4>
+                            <p class="projeto-desc">Execução de pintura predial completa, contemplando áreas internas comuns e fachadas externas. O serviço incluiu preparação de superfícies, correção de imperfeições, selagem, aplicação de massa niveladora e pintura acrílica de alto desempenho. A intervenção priorizou uniformidade estética, proteção contra intempéries e aumento da durabilidade do revestimento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="projeto-slide">
+                    <div class="projeto-row">
+                        <div class="projeto-img">
+                            <img src="assets/Condominio-Edificio-Place-du-Soleil-–-Sao-Jose-_SC.jpg" alt="Edifício Place du Soleil">
+                        </div>
+                        <div class="projeto-text">
+                            <h3>Condomínio Edifício Place du Soleil</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> São José - SC</p>
+                            <h4>Pintura Interna e Externa</h4>
+                            <p class="projeto-desc">Serviço completo de revitalização predial, incluindo áreas comuns internas e fachada. Aplicação de sistema de pintura com preparo técnico de superfície, assegurando acabamento uniforme e proteção estrutural.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow next-arrow" id="next-projeto"><i class="fas fa-chevron-right"></i></button>
+            
+            <div class="slider-dots" id="projetos-dots"></div>
+        </div>
+        
+        <!-- Marquee de Projetos -->
+        <div class="marquee-section">
+            <div class="marquee-wrapper">
+                <div class="marquee-track" id="marquee-track">
+                    <div class="marquee-item"><span class="marquee-title">Residencial American Residence</span><span class="marquee-city">Biguaçu - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Gryzyella</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Serra Mar</span><span class="marquee-city">Biguaçu - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Comercial Residêncial Jose Martins</span><span class="marquee-city">Biguaçu - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Place du Soleil</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Residencial Jasmim dos Açores</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Pielmont</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Condomínio Floresta Tower</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Condomínio Torre Cambirela</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Comercial Alessandra</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Chamonix</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Maximus</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Stella</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Avenida</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Elisandra</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Adriático</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Comercial Hércules</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Multifamiliar</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Panambi</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Eugênio Raulino Koerich</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Prédio Comercial e Residencial</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">D.Nadir - Apartamentos para Locação</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residência Multifamiliar</span><span class="marquee-city">Biguaçu - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Galpão Comercial</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Dom Manoel</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Tour de Lyon</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Dona Olivia</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial Mathias</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Porto Fino</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Condomínio Solar do Bom Abrigo</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Edifício Regina</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Residencial São Jorge</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Planejatto Móveis Exclusivos</span><span class="marquee-city">São José - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Paróquia Nossa Senhora de Lourdes e São Luiz</span><span class="marquee-city">Florianópolis - SC</span></div>
+                    <div class="marquee-item"><span class="marquee-title">Floripainéis</span><span class="marquee-city">Biguaçu - SC</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="contato section-padding" id="contato">
+        <div class="container">
+            <div class="contato-wrapper">
+                <div class="contato-info animate-fade-right">
+                    <div class="section-header">
+                        <span class="subtitle">Fale Conosco</span>
+                        <h2>Vamos construir algo incrível juntos</h2>
+                        <p>Entre em contato conosco para solicitar um orçamento ou tirar dúvidas sobre nossos serviços de engenharia.</p>
+                    </div>
+
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>aliancakengenharia@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Telefone</h4>
+                                <p>(48) 98412-4110  |  (49) 98911-3344</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Localização</h4>
+                                <p>Bairro: Barreiros, São José, Santa Catarina</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://instagram.com/alianca_k_engenharia" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="contato-form-container animate-fade-left">
+                    <form class="contato-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder="Seu Nome">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder="Seu E-mail">
+                        </div>
+                        <div class="form-group">
+                            <select id="assunto" required>
+                                <option value="" disabled selected>Selecione o Assunto</option>
+                                <option value="orcamento">Orçamento de Projeto</option>
+                                <option value="ppci">Prevenção de Incêndio (PPCI)</option>
+                                <option value="laudo">Laudos / Engenharia Diagnóstica</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required placeholder="Sua Mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Aliança K Engenharia" class="nav-img-logo">
+                    <div class="logo-text">
+                        <span class="logo-title">Aliança K</span>
+                        <span class="logo-subtitle">Engenharia</span>
+                    </div>
+                </div>
+                <p>Referência em engenharia e gestão de obras de alto padrão, entregando resultados sólidos e duradouros.</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Siga nossas redes</h4>
+                <div class="social-links">
+                    <a href="https://instagram.com/alianca_k_engenharia" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Aliança K Engenharia. Todos os direitos reservados.</p>
+            <p>Desenvolvido com excelência.</p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5548984124110?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Aliança%20K%20Engenharia!" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
