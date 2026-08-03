@@ -91,182 +91,184 @@
             <div class="raiox-container">
                 <!-- Blueprint Building representation -->
                 <div class="building-blueprint animate-fade-up">
-                    <svg class="building-svg" viewBox="0 0 380 560" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="facadeGrad" x1="0" y1="0" x2="1" y2="0.15">
-                          <stop offset="0%" stop-color="#1c2d47"/>
-                          <stop offset="55%" stop-color="#182842"/>
-                          <stop offset="100%" stop-color="#0d1729"/>
-                        </linearGradient>
-                        <linearGradient id="sideFacadeGrad" x1="0" y1="0" x2="1" y2="0">
-                          <stop offset="0%" stop-color="#0a1424"/>
-                          <stop offset="100%" stop-color="#060d18"/>
-                        </linearGradient>
-                        <linearGradient id="roofTopGrad" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stop-color="#2a3c5e"/>
-                          <stop offset="100%" stop-color="#15233c"/>
-                        </linearGradient>
-                        <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
-                          <stop offset="0%" stop-color="#2a4468"/>
-                          <stop offset="55%" stop-color="#152238"/>
-                          <stop offset="100%" stop-color="#0b1526"/>
-                        </linearGradient>
-                        <linearGradient id="tankGrad" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stop-color="#3a4c70"/>
-                          <stop offset="100%" stop-color="#212f4a"/>
-                        </linearGradient>
-                        <filter id="concreteTexture" x="-5%" y="-5%" width="110%" height="110%">
-                          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" seed="7"/>
-                          <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
-                        </filter>
-                      </defs>
-                
-                      <ellipse cx="185" cy="530" rx="150" ry="11" fill="#000" opacity="0.4"/>
-                
-                      <rect x="15" y="522" width="350" height="14" fill="#0e1526"/>
-                      <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
-                        <line x1="45" y1="522" x2="45" y2="536"/>
-                        <line x1="90" y1="522" x2="90" y2="536"/>
-                        <line x1="300" y1="522" x2="300" y2="536"/>
-                        <line x1="335" y1="522" x2="335" y2="536"/>
-                      </g>
-                      <line x1="330" y1="522" x2="330" y2="470" stroke="#1c2740" stroke-width="3"/>
-                      <circle cx="330" cy="466" r="6" fill="#f2c14e" opacity="0.55"/>
-                      <rect x="20" y="512" width="26" height="10" rx="2" fill="#1c2740"/>
-                      <circle cx="33" cy="500" r="12" fill="#1f3a2e"/>
-                      <circle cx="24" cy="504" r="9" fill="#20402f"/>
-                      <circle cx="42" cy="504" r="9" fill="#1a3327"/>
-                
-                      <polygon points="264,95 322,72 322,500 264,522" fill="url(#sideFacadeGrad)" stroke="#0a1424" stroke-width="1.5"/>
-                
-                      <line x1="304" y1="105" x2="311" y2="490" stroke="#1c2d47" stroke-width="4" stroke-linecap="round"/>
-                      <circle cx="305" cy="185" r="4.5" fill="#243458"/>
-                      <circle cx="307" cy="300" r="4.5" fill="#243458"/>
-                      <circle cx="309" cy="415" r="4.5" fill="#243458"/>
-                
-                      <g transform="matrix(1,-0.379,0,1,0,101.6)">
-                        <rect class="win-side" x="275" y="108" width="20" height="38" rx="1.5"/>
-                        <rect class="win-side win-lit" x="275" y="182" width="20" height="38" rx="1.5"/>
-                        <rect class="win-side" x="275" y="256" width="20" height="38" rx="1.5"/>
-                        <rect class="win-side win-lit-blue" x="275" y="330" width="20" height="38" rx="1.5"/>
-                        <rect class="win-side" x="275" y="404" width="20" height="38" rx="1.5"/>
-                        <rect class="win-side" x="275" y="466" width="20" height="36" rx="1.5"/>
-                      </g>
-                
-                      <polygon points="264,86 322,64 322,72 264,95" fill="#0a1424"/>
-                
-                      <rect x="60" y="95" width="204" height="427" rx="2" fill="url(#facadeGrad)" stroke="#233a5e" stroke-width="1.5"/>
-                      <rect x="60" y="95" width="204" height="427" rx="2" fill="url(#facadeGrad)" filter="url(#concreteTexture)"/>
-                
-                      <polygon points="60,95 264,95 322,72 118,72" fill="url(#roofTopGrad)" stroke="#233a5e" stroke-width="1"/>
-                      <rect x="58" y="87" width="208" height="9" fill="#101f38"/>
-                
-                      <rect x="100" y="76" width="34" height="18" rx="2" fill="#182842" stroke="#0a1424"/>
-                      <rect x="165" y="50" width="38" height="30" rx="3" fill="url(#tankGrad)" stroke="#0a1424"/>
-                      <rect x="165" y="47" width="38" height="8" rx="4" fill="#39496e"/>
-                      <line x1="228" y1="70" x2="228" y2="22" stroke="#26385c" stroke-width="2.5"/>
-                      <line x1="218" y1="34" x2="238" y2="34" stroke="#26385c" stroke-width="2"/>
-                      <line x1="220" y1="46" x2="236" y2="46" stroke="#26385c" stroke-width="2"/>
-                      <circle class="beacon" cx="228" cy="20" r="3" fill="#ff4d4d"/>
-                
-                      <g stroke="#233a5e" stroke-width="1">
-                        <line x1="60" y1="167" x2="264" y2="167"/>
-                        <line x1="60" y1="239" x2="264" y2="239"/>
-                        <line x1="60" y1="311" x2="264" y2="311"/>
-                        <line x1="60" y1="383" x2="264" y2="383"/>
-                        <line x1="60" y1="450" x2="264" y2="450"/>
-                      </g>
-                      <g stroke="rgba(0,180,216,0.08)" stroke-width="1">
-                        <line x1="112" y1="95" x2="112" y2="450"/>
-                        <line x1="168" y1="95" x2="168" y2="450"/>
-                        <line x1="212" y1="95" x2="212" y2="450"/>
-                      </g>
-                
-                      <rect class="win-front" x="75" y="110" width="38" height="42" rx="2"/>
-                      <rect class="win-front win-lit" x="145" y="110" width="38" height="42" rx="2"/>
-                      <rect class="win-front win-lit-blue" x="211" y="110" width="38" height="42" rx="2"/>
-                
-                      <rect class="win-front win-lit-blue" x="75" y="182" width="38" height="42" rx="2"/>
-                      <rect class="win-front" x="145" y="182" width="38" height="42" rx="2"/>
-                      <rect class="win-front win-lit win-flicker" x="211" y="182" width="38" height="42" rx="2"/>
-                      <rect x="56" y="231" width="212" height="7" rx="1.5" fill="#0d1729" stroke="#060d18"/>
-                      <g stroke="rgba(0,180,216,0.35)" stroke-width="1">
-                        <line x1="60" y1="215" x2="60" y2="231"/>
-                        <line x1="80" y1="215" x2="80" y2="231"/>
-                        <line x1="100" y1="215" x2="100" y2="231"/>
-                        <line x1="120" y1="215" x2="120" y2="231"/>
-                        <line x1="140" y1="215" x2="140" y2="231"/>
-                        <line x1="160" y1="215" x2="160" y2="231"/>
-                        <line x1="180" y1="215" x2="180" y2="231"/>
-                        <line x1="200" y1="215" x2="200" y2="231"/>
-                        <line x1="220" y1="215" x2="220" y2="231"/>
-                        <line x1="240" y1="215" x2="240" y2="231"/>
-                        <line x1="260" y1="215" x2="260" y2="231"/>
-                        <line x1="56" y1="215" x2="268" y2="215"/>
-                      </g>
-                
-                      <rect class="win-front win-lit" x="75" y="254" width="38" height="42" rx="2"/>
-                      <rect class="win-front" x="145" y="254" width="38" height="42" rx="2"/>
-                      <rect class="win-front" x="211" y="254" width="38" height="42" rx="2"/>
-                      <rect class="ac-unit" x="219" y="298" width="30" height="11" rx="1.5"/>
-                
-                      <rect class="win-front" x="75" y="326" width="38" height="42" rx="2"/>
-                      <rect class="win-front win-lit-blue" x="145" y="326" width="38" height="42" rx="2"/>
-                      <rect class="win-front win-lit" x="211" y="326" width="38" height="42" rx="2"/>
-                      <rect x="56" y="375" width="212" height="7" rx="1.5" fill="#0d1729" stroke="#060d18"/>
-                      <g stroke="rgba(0,180,216,0.35)" stroke-width="1">
-                        <line x1="60" y1="359" x2="60" y2="375"/>
-                        <line x1="80" y1="359" x2="80" y2="375"/>
-                        <line x1="100" y1="359" x2="100" y2="375"/>
-                        <line x1="120" y1="359" x2="120" y2="375"/>
-                        <line x1="140" y1="359" x2="140" y2="375"/>
-                        <line x1="160" y1="359" x2="160" y2="375"/>
-                        <line x1="180" y1="359" x2="180" y2="375"/>
-                        <line x1="200" y1="359" x2="200" y2="375"/>
-                        <line x1="220" y1="359" x2="220" y2="375"/>
-                        <line x1="240" y1="359" x2="240" y2="375"/>
-                        <line x1="260" y1="359" x2="260" y2="375"/>
-                        <line x1="56" y1="359" x2="268" y2="359"/>
-                      </g>
-                
-                      <rect class="win-front" x="75" y="398" width="38" height="42" rx="2"/>
-                      <rect class="win-front win-lit" x="145" y="398" width="38" height="42" rx="2"/>
-                      <rect class="win-front" x="211" y="398" width="38" height="42" rx="2"/>
-                      <rect class="ac-unit" x="73" y="442" width="30" height="11" rx="1.5"/>
-                
-                      <rect x="70" y="462" width="184" height="58" fill="url(#glassGrad)" stroke="#233a5e" stroke-width="1.5"/>
-                      <rect x="55" y="453" width="214" height="9" fill="#00B4D8" opacity="0.85"/>
-                      <line x1="72" y1="453" x2="72" y2="520" stroke="#0a1424" stroke-width="2"/>
-                      <line x1="252" y1="453" x2="252" y2="520" stroke="#0a1424" stroke-width="2"/>
-                      <rect x="142" y="466" width="18" height="54" fill="#0a1424" stroke="#233a5e"/>
-                      <rect x="160" y="466" width="18" height="54" fill="#0a1424" stroke="#233a5e"/>
-                      <line x1="151" y1="466" x2="151" y2="520" stroke="#00B4D8" stroke-width="1.5" opacity="0.5"/>
-                      <line x1="169" y1="466" x2="169" y2="520" stroke="#00B4D8" stroke-width="1.5" opacity="0.5"/>
-                
-                      <rect class="elec-box" x="42" y="480" width="18" height="26" rx="1"/>
-                      <rect x="42" y="480" width="18" height="4" fill="#f2c14e"/>
-                
-                      <rect class="fire-box" x="272" y="480" width="16" height="30" rx="1"/>
-                      <line x1="280" y1="486" x2="280" y2="504" stroke="#ff8080" stroke-width="1.5"/>
-                    </svg>
-                
-                    <div class="hotspot" data-target="info-cobertura" style="top: 6%; left: 54%;">
-                        <div class="pulse"></div>
-                    </div>
-                    <div class="hotspot" data-target="info-fachada" style="top: 30%; left: 20%;">
-                        <div class="pulse"></div>
-                    </div>
-                    <div class="hotspot" data-target="info-estrutura" style="top: 52%; left: 38%;">
-                        <div class="pulse"></div>
-                    </div>
-                    <div class="hotspot" data-target="info-hidrossanitario" style="top: 58%; left: 73%;">
-                        <div class="pulse"></div>
-                    </div>
-                    <div class="hotspot" data-target="info-eletrica" style="top: 85%; left: 12%;">
-                        <div class="pulse"></div>
-                    </div>
-                    <div class="hotspot" data-target="info-incendio" style="top: 85%; left: 65%;">
-                        <div class="pulse"></div>
+                    <div class="building-wrapper">
+                        <svg class="building-svg" viewBox="0 0 380 560" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                            <linearGradient id="facadeGrad" x1="0" y1="0" x2="1" y2="0.15">
+                              <stop offset="0%" stop-color="#1c2d47"/>
+                              <stop offset="55%" stop-color="#182842"/>
+                              <stop offset="100%" stop-color="#0d1729"/>
+                            </linearGradient>
+                            <linearGradient id="sideFacadeGrad" x1="0" y1="0" x2="1" y2="0">
+                              <stop offset="0%" stop-color="#0a1424"/>
+                              <stop offset="100%" stop-color="#060d18"/>
+                            </linearGradient>
+                            <linearGradient id="roofTopGrad" x1="0" y1="0" x2="0" y2="1">
+                              <stop offset="0%" stop-color="#2a3c5e"/>
+                              <stop offset="100%" stop-color="#15233c"/>
+                            </linearGradient>
+                            <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+                              <stop offset="0%" stop-color="#2a4468"/>
+                              <stop offset="55%" stop-color="#152238"/>
+                              <stop offset="100%" stop-color="#0b1526"/>
+                            </linearGradient>
+                            <linearGradient id="tankGrad" x1="0" y1="0" x2="0" y2="1">
+                              <stop offset="0%" stop-color="#3a4c70"/>
+                              <stop offset="100%" stop-color="#212f4a"/>
+                            </linearGradient>
+                            <filter id="concreteTexture" x="-5%" y="-5%" width="110%" height="110%">
+                              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise" seed="7"/>
+                              <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
+                            </filter>
+                          </defs>
+                    
+                          <ellipse cx="185" cy="530" rx="150" ry="11" fill="#000" opacity="0.4"/>
+                    
+                          <rect x="15" y="522" width="350" height="14" fill="#0e1526"/>
+                          <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+                            <line x1="45" y1="522" x2="45" y2="536"/>
+                            <line x1="90" y1="522" x2="90" y2="536"/>
+                            <line x1="300" y1="522" x2="300" y2="536"/>
+                            <line x1="335" y1="522" x2="335" y2="536"/>
+                          </g>
+                          <line x1="330" y1="522" x2="330" y2="470" stroke="#1c2740" stroke-width="3"/>
+                          <circle cx="330" cy="466" r="6" fill="#f2c14e" opacity="0.55"/>
+                          <rect x="20" y="512" width="26" height="10" rx="2" fill="#1c2740"/>
+                          <circle cx="33" cy="500" r="12" fill="#1f3a2e"/>
+                          <circle cx="24" cy="504" r="9" fill="#20402f"/>
+                          <circle cx="42" cy="504" r="9" fill="#1a3327"/>
+                    
+                          <polygon points="264,95 322,72 322,500 264,522" fill="url(#sideFacadeGrad)" stroke="#0a1424" stroke-width="1.5"/>
+                    
+                          <line x1="304" y1="105" x2="311" y2="490" stroke="#1c2d47" stroke-width="4" stroke-linecap="round"/>
+                          <circle cx="305" cy="185" r="4.5" fill="#243458"/>
+                          <circle cx="307" cy="300" r="4.5" fill="#243458"/>
+                          <circle cx="309" cy="415" r="4.5" fill="#243458"/>
+                    
+                          <g transform="matrix(1,-0.379,0,1,0,101.6)">
+                            <rect class="win-side" x="275" y="108" width="20" height="38" rx="1.5"/>
+                            <rect class="win-side win-lit" x="275" y="182" width="20" height="38" rx="1.5"/>
+                            <rect class="win-side" x="275" y="256" width="20" height="38" rx="1.5"/>
+                            <rect class="win-side win-lit-blue" x="275" y="330" width="20" height="38" rx="1.5"/>
+                            <rect class="win-side" x="275" y="404" width="20" height="38" rx="1.5"/>
+                            <rect class="win-side" x="275" y="466" width="20" height="36" rx="1.5"/>
+                          </g>
+                    
+                          <polygon points="264,86 322,64 322,72 264,95" fill="#0a1424"/>
+                    
+                          <rect x="60" y="95" width="204" height="427" rx="2" fill="url(#facadeGrad)" stroke="#233a5e" stroke-width="1.5"/>
+                          <rect x="60" y="95" width="204" height="427" rx="2" fill="url(#facadeGrad)" filter="url(#concreteTexture)"/>
+                    
+                          <polygon points="60,95 264,95 322,72 118,72" fill="url(#roofTopGrad)" stroke="#233a5e" stroke-width="1"/>
+                          <rect x="58" y="87" width="208" height="9" fill="#101f38"/>
+                    
+                          <rect x="100" y="76" width="34" height="18" rx="2" fill="#182842" stroke="#0a1424"/>
+                          <rect x="165" y="50" width="38" height="30" rx="3" fill="url(#tankGrad)" stroke="#0a1424"/>
+                          <rect x="165" y="47" width="38" height="8" rx="4" fill="#39496e"/>
+                          <line x1="228" y1="70" x2="228" y2="22" stroke="#26385c" stroke-width="2.5"/>
+                          <line x1="218" y1="34" x2="238" y2="34" stroke="#26385c" stroke-width="2"/>
+                          <line x1="220" y1="46" x2="236" y2="46" stroke="#26385c" stroke-width="2"/>
+                          <circle class="beacon" cx="228" cy="20" r="3" fill="#ff4d4d"/>
+                    
+                          <g stroke="#233a5e" stroke-width="1">
+                            <line x1="60" y1="167" x2="264" y2="167"/>
+                            <line x1="60" y1="239" x2="264" y2="239"/>
+                            <line x1="60" y1="311" x2="264" y2="311"/>
+                            <line x1="60" y1="383" x2="264" y2="383"/>
+                            <line x1="60" y1="450" x2="264" y2="450"/>
+                          </g>
+                          <g stroke="rgba(0,180,216,0.08)" stroke-width="1">
+                            <line x1="112" y1="95" x2="112" y2="450"/>
+                            <line x1="168" y1="95" x2="168" y2="450"/>
+                            <line x1="212" y1="95" x2="212" y2="450"/>
+                          </g>
+                    
+                          <rect class="win-front" x="75" y="110" width="38" height="42" rx="2"/>
+                          <rect class="win-front win-lit" x="145" y="110" width="38" height="42" rx="2"/>
+                          <rect class="win-front win-lit-blue" x="211" y="110" width="38" height="42" rx="2"/>
+                    
+                          <rect class="win-front win-lit-blue" x="75" y="182" width="38" height="42" rx="2"/>
+                          <rect class="win-front" x="145" y="182" width="38" height="42" rx="2"/>
+                          <rect class="win-front win-lit win-flicker" x="211" y="182" width="38" height="42" rx="2"/>
+                          <rect x="56" y="231" width="212" height="7" rx="1.5" fill="#0d1729" stroke="#060d18"/>
+                          <g stroke="rgba(0,180,216,0.35)" stroke-width="1">
+                            <line x1="60" y1="215" x2="60" y2="231"/>
+                            <line x1="80" y1="215" x2="80" y2="231"/>
+                            <line x1="100" y1="215" x2="100" y2="231"/>
+                            <line x1="120" y1="215" x2="120" y2="231"/>
+                            <line x1="140" y1="215" x2="140" y2="231"/>
+                            <line x1="160" y1="215" x2="160" y2="231"/>
+                            <line x1="180" y1="215" x2="180" y2="231"/>
+                            <line x1="200" y1="215" x2="200" y2="231"/>
+                            <line x1="220" y1="215" x2="220" y2="231"/>
+                            <line x1="240" y1="215" x2="240" y2="231"/>
+                            <line x1="260" y1="215" x2="260" y2="231"/>
+                            <line x1="56" y1="215" x2="268" y2="215"/>
+                          </g>
+                    
+                          <rect class="win-front win-lit" x="75" y="254" width="38" height="42" rx="2"/>
+                          <rect class="win-front" x="145" y="254" width="38" height="42" rx="2"/>
+                          <rect class="win-front" x="211" y="254" width="38" height="42" rx="2"/>
+                          <rect class="ac-unit" x="219" y="298" width="30" height="11" rx="1.5"/>
+                    
+                          <rect class="win-front" x="75" y="326" width="38" height="42" rx="2"/>
+                          <rect class="win-front win-lit-blue" x="145" y="326" width="38" height="42" rx="2"/>
+                          <rect class="win-front win-lit" x="211" y="326" width="38" height="42" rx="2"/>
+                          <rect x="56" y="375" width="212" height="7" rx="1.5" fill="#0d1729" stroke="#060d18"/>
+                          <g stroke="rgba(0,180,216,0.35)" stroke-width="1">
+                            <line x1="60" y1="359" x2="60" y2="375"/>
+                            <line x1="80" y1="359" x2="80" y2="375"/>
+                            <line x1="100" y1="359" x2="100" y2="375"/>
+                            <line x1="120" y1="359" x2="120" y2="375"/>
+                            <line x1="140" y1="359" x2="140" y2="375"/>
+                            <line x1="160" y1="359" x2="160" y2="375"/>
+                            <line x1="180" y1="359" x2="180" y2="375"/>
+                            <line x1="200" y1="359" x2="200" y2="375"/>
+                            <line x1="220" y1="359" x2="220" y2="375"/>
+                            <line x1="240" y1="359" x2="240" y2="375"/>
+                            <line x1="260" y1="359" x2="260" y2="375"/>
+                            <line x1="56" y1="359" x2="268" y2="359"/>
+                          </g>
+                    
+                          <rect class="win-front" x="75" y="398" width="38" height="42" rx="2"/>
+                          <rect class="win-front win-lit" x="145" y="398" width="38" height="42" rx="2"/>
+                          <rect class="win-front" x="211" y="398" width="38" height="42" rx="2"/>
+                          <rect class="ac-unit" x="73" y="442" width="30" height="11" rx="1.5"/>
+                    
+                          <rect x="70" y="462" width="184" height="58" fill="url(#glassGrad)" stroke="#233a5e" stroke-width="1.5"/>
+                          <rect x="55" y="453" width="214" height="9" fill="#00B4D8" opacity="0.85"/>
+                          <line x1="72" y1="453" x2="72" y2="520" stroke="#0a1424" stroke-width="2"/>
+                          <line x1="252" y1="453" x2="252" y2="520" stroke="#0a1424" stroke-width="2"/>
+                          <rect x="142" y="466" width="18" height="54" fill="#0a1424" stroke="#233a5e"/>
+                          <rect x="160" y="466" width="18" height="54" fill="#0a1424" stroke="#233a5e"/>
+                          <line x1="151" y1="466" x2="151" y2="520" stroke="#00B4D8" stroke-width="1.5" opacity="0.5"/>
+                          <line x1="169" y1="466" x2="169" y2="520" stroke="#00B4D8" stroke-width="1.5" opacity="0.5"/>
+                    
+                          <rect class="elec-box" x="42" y="480" width="18" height="26" rx="1"/>
+                          <rect x="42" y="480" width="18" height="4" fill="#f2c14e"/>
+                    
+                          <rect class="fire-box" x="272" y="480" width="16" height="30" rx="1"/>
+                          <line x1="280" y1="486" x2="280" y2="504" stroke="#ff8080" stroke-width="1.5"/>
+                        </svg>
+                    
+                        <div class="hotspot" data-target="info-cobertura" style="top: 6%; left: 54%;">
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="hotspot" data-target="info-fachada" style="top: 30%; left: 20%;">
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="hotspot" data-target="info-estrutura" style="top: 52%; left: 38%;">
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="hotspot" data-target="info-hidrossanitario" style="top: 58%; left: 73%;">
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="hotspot" data-target="info-eletrica" style="top: 85%; left: 12%;">
+                            <div class="pulse"></div>
+                        </div>
+                        <div class="hotspot" data-target="info-incendio" style="top: 85%; left: 65%;">
+                            <div class="pulse"></div>
+                        </div>
                     </div>
                 </div>
 

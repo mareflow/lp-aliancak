@@ -640,7 +640,6 @@ img {
 
 .building-blueprint {
     flex: 1;
-    position: relative;
     height: 500px;
     background: transparent;
     display: flex;
@@ -648,11 +647,19 @@ img {
     align-items: flex-end;
 }
 
-.building-svg {
-    width: 280px;
+.building-wrapper {
+    position: relative;
     height: 100%;
-    display: block;
-    filter: drop-shadow(0 25px 35px rgba(0,0,0,0.55));
+    /* Keep the wrapper exactly as wide as the SVG to maintain hotspot percentage accuracy */
+    aspect-ratio: 380 / 560;
+    max-width: 100%;
+}
+
+.building-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 20px 30px rgba(0,180,216,0.15));
+    animation: float 6s ease-in-out infinite;
 }
 
 .win {
@@ -1699,4 +1706,56 @@ footer {
 .marquee-item:hover .marquee-city {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ==========================================================================
+   Mobile Adjustments for Raio-X and Slider
+   ========================================================================== */
+@media (max-width: 992px) {
+    .raiox-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .building-blueprint {
+        height: 400px;
+        width: 100%;
+    }
+    
+    .raiox-info-panel {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .info-card {
+        position: relative;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    
+    .info-card.active {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        position: relative;
+    }
+    
+    .projeto-slide {
+        padding: 1rem 1.5rem;
+    }
+    
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .prev-arrow {
+        left: 5px;
+    }
+    
+    .next-arrow {
+        right: 5px;
+    }
 }
