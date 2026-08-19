@@ -226,7 +226,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsContainer = document.getElementById('projetos-dots');
     const pauseBtn = document.getElementById('slider-pause-btn');
     const pauseText = document.getElementById('slider-pause-text');
+    const mobilePauseBtn = document.getElementById('mobile-pause-btn');
     const sliderContainer = document.querySelector('.slider-container');
+    const portfolioSection = document.getElementById('portfolio');
     
     if (sliderTrack && slides.length > 0) {
         let currentSlide = 0;
@@ -284,20 +286,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function updatePauseBtnUI(paused) {
-            if (!pauseBtn) return;
-            const icon = pauseBtn.querySelector('i');
-            if (paused) {
-                pauseBtn.classList.add('paused');
-                if (icon) icon.className = 'fas fa-play';
-                if (pauseText) pauseText.textContent = 'Continuar';
-                pauseBtn.setAttribute('title', 'Retomar rotação automática');
-                pauseBtn.setAttribute('aria-label', 'Retomar rotação automática');
-            } else {
-                pauseBtn.classList.remove('paused');
-                if (icon) icon.className = 'fas fa-pause';
-                if (pauseText) pauseText.textContent = 'Pausar';
-                pauseBtn.setAttribute('title', 'Pausar rotação automática');
-                pauseBtn.setAttribute('aria-label', 'Pausar rotação automática');
+            // Update desktop button
+            if (pauseBtn) {
+                const icon = pauseBtn.querySelector('i');
+                if (paused) {
+                    pauseBtn.classList.add('paused');
+                    if (icon) icon.className = 'fas fa-play';
+                    if (pauseText) pauseText.textContent = 'Continuar';
+                    pauseBtn.setAttribute('title', 'Retomar rotação automática');
+                    pauseBtn.setAttribute('aria-label', 'Retomar rotação automática');
+                } else {
+                    pauseBtn.classList.remove('paused');
+                    if (icon) icon.className = 'fas fa-pause';
+                    if (pauseText) pauseText.textContent = 'Pausar';
+                    pauseBtn.setAttribute('title', 'Pausar rotação automática');
+                    pauseBtn.setAttribute('aria-label', 'Pausar rotação automática');
+                }
+            }
+
+            // Update mobile floating button
+            if (mobilePauseBtn) {
+                const mobileIcon = mobilePauseBtn.querySelector('i');
+                if (paused) {
+                    mobilePauseBtn.classList.add('paused');
+                    if (mobileIcon) mobileIcon.className = 'fas fa-play';
+                    mobilePauseBtn.setAttribute('title', 'Retomar rotação automática');
+                    mobilePauseBtn.setAttribute('aria-label', 'Retomar rotação automática');
+                } else {
+                    mobilePauseBtn.classList.remove('paused');
+                    if (mobileIcon) mobileIcon.className = 'fas fa-pause';
+                    mobilePauseBtn.setAttribute('title', 'Pausar rotação automática');
+                    mobilePauseBtn.setAttribute('aria-label', 'Pausar rotação automática');
+                }
             }
         }
         
@@ -316,6 +336,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pauseBtn) {
             pauseBtn.addEventListener('click', togglePause);
         }
+
+        if (mobilePauseBtn) {
+            mobilePauseBtn.addEventListener('click', togglePause);
+        }
         
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
@@ -331,6 +355,33 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+
+        sliderTrack.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        sliderTrack.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+            if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+                if (diffX < 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+                resetInterval();
+            }
+        }, { passive: true });
+
+        // Hover pause on desktop
         if (sliderContainer) {
             sliderContainer.addEventListener('mouseenter', () => {
                 if (!isManuallyPaused) {
@@ -343,6 +394,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+
+        // Floating controls visibility management for mobile
+        const floatingElements = [prevBtn, nextBtn, mobilePauseBtn].filter(Boolean);
+        function updateFloatingControlsVisibility() {
+            if (!portfolioSection || window.innerWidth > 992) {
+                floatingElements.forEach(el => el.classList.remove('in-view'));
+                return;
+            }
+            const rect = portfolioSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const isVisible = (rect.top < windowHeight * 0.85) && (rect.bottom > windowHeight * 0.15);
+            
+            floatingElements.forEach(el => {
+                if (isVisible) {
+                    el.classList.add('in-view');
+                } else {
+                    el.classList.remove('in-view');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateFloatingControlsVisibility, { passive: true });
+        window.addEventListener('resize', updateFloatingControlsVisibility, { passive: true });
+        updateFloatingControlsVisibility();
         
         // Start auto play
         startInterval();
