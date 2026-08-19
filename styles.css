@@ -2229,6 +2229,37 @@ footer {
     font-size: 1.1rem;
 }
 
+.qrcode-modal-actions {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.qrcode-direct-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 320px;
+    padding: 0.95rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border-radius: 30px;
+    text-decoration: none;
+    background: var(--accent-gradient);
+    color: #111a28;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+}
+
+.qrcode-direct-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+    color: #111a28;
+}
+
 @media (max-width: 480px) {
     .qrcode-large-img {
         width: 200px !important;
@@ -2239,5 +2270,9 @@ footer {
     }
     .qrcode-modal-header h3 {
         font-size: 1.5rem;
+    }
+    .qrcode-direct-btn {
+        font-size: 0.9rem;
+        padding: 0.85rem 1.2rem;
     }
 }

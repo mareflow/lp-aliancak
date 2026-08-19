@@ -489,7 +489,7 @@
                     <div class="projeto-row">
                         <div class="projeto-img">
                             <img src="assets/Condominio-Edificio-Serra-Mar-Biguacu_SC.jpg" alt="Edifício Serra Mar">
-                            <div class="projeto-qrcode-badge" id="open-qrcode-modal" title="Clique para ampliar o QR Code">
+                            <div class="projeto-qrcode-badge" id="open-qrcode-modal" data-link="https://mareflow.github.io/qrcode-alicancak/publico/obra.html?id=2f9640fd-aeb8-4002-bd60-76840b81c64c" title="Clique para ampliar o QR Code">
                                 <div class="qrcode-wrapper">
                                     <img src="qrcode/QRCode-Edificio_Serra_Mar.png" alt="QR Code - Informações da Obra Edifício Serra Mar" class="qrcode-thumb">
                                     <span class="qrcode-expand-hint"><i class="fas fa-search-plus"></i> Ampliar</span>
@@ -698,14 +698,19 @@
             <button class="qrcode-modal-close" id="close-qrcode-modal" aria-label="Fechar Modal">&times;</button>
             <div class="qrcode-modal-header">
                 <span class="modal-badge"><i class="fas fa-qrcode"></i> Informações da Obra</span>
-                <h3>Edifício Serra Mar</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Biguaçu - SC</p>
+                <h3 id="qrcode-modal-title">Edifício Serra Mar</h3>
+                <p id="qrcode-modal-location"><i class="fas fa-map-marker-alt"></i> Biguaçu - SC</p>
             </div>
             <div class="qrcode-modal-body">
                 <div class="qrcode-modal-img-wrap">
-                    <img src="qrcode/QRCode-Edificio_Serra_Mar.png" alt="QR Code Edifício Serra Mar Ampliado" class="qrcode-large-img">
+                    <img src="qrcode/QRCode-Edificio_Serra_Mar.png" alt="QR Code Edifício Serra Mar Ampliado" id="qrcode-modal-img" class="qrcode-large-img">
                 </div>
-                <p class="qrcode-scan-help"><i class="fas fa-camera"></i> Aponte a câmera do seu celular para escanear</p>
+                <p class="qrcode-scan-help"><i class="fas fa-camera"></i> Aponte a câmera do celular para escanear ou clique no botão abaixo:</p>
+                <div class="qrcode-modal-actions">
+                    <a href="https://mareflow.github.io/qrcode-alicancak/publico/obra.html?id=2f9640fd-aeb8-4002-bd60-76840b81c64c" id="qrcode-modal-link" target="_blank" rel="noopener noreferrer" class="btn btn-primary qrcode-direct-btn">
+                        <i class="fas fa-external-link-alt"></i> Acessar Informações da Obra
+                    </a>
+                </div>
             </div>
         </div>
     </div>

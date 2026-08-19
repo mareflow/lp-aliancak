@@ -425,12 +425,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // QR Code Modal Logic
     const qrcodeModal = document.getElementById('qrcode-modal');
-    const openQrcodeBtn = document.getElementById('open-qrcode-modal');
+    const openQrcodeBtns = document.querySelectorAll('.projeto-qrcode-badge');
     const closeQrcodeBtn = document.getElementById('close-qrcode-modal');
     const qrcodeOverlay = document.getElementById('qrcode-modal-overlay');
+    const modalLink = document.getElementById('qrcode-modal-link');
 
-    if (qrcodeModal && openQrcodeBtn) {
-        const openModal = () => {
+    if (qrcodeModal && openQrcodeBtns.length > 0) {
+        const openModal = (btn) => {
+            const link = btn.getAttribute('data-link');
+            if (link && modalLink) {
+                modalLink.setAttribute('href', link);
+            }
             qrcodeModal.classList.add('active');
             qrcodeModal.setAttribute('aria-hidden', 'false');
             document.body.classList.add('no-scroll');
@@ -442,7 +447,9 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('no-scroll');
         };
 
-        openQrcodeBtn.addEventListener('click', openModal);
+        openQrcodeBtns.forEach(btn => {
+            btn.addEventListener('click', () => openModal(btn));
+        });
 
         if (closeQrcodeBtn) closeQrcodeBtn.addEventListener('click', closeModal);
         if (qrcodeOverlay) qrcodeOverlay.addEventListener('click', closeModal);
