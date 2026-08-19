@@ -445,7 +445,7 @@
     <section class="portfolio section-padding" id="portfolio">
         <div class="container">
             <div class="section-header center animate-fade-up">
-                <h2>Projetos</h2>
+                <h2>Fiscalização de Obras</h2>
             </div>
 
         </div> <!-- Fechar container para permitir largura total -->
@@ -492,6 +492,13 @@
                     <div class="projeto-row">
                         <div class="projeto-img">
                             <img src="assets/Condominio-Edificio-Serra-Mar-Biguacu_SC.jpg" alt="Edifício Serra Mar">
+                            <div class="projeto-qrcode-badge">
+                                <img src="qrcode/QRCode-Edificio_Serra_Mar.png" alt="QR Code - Informações da Obra Edifício Serra Mar" class="qrcode-thumb">
+                                <div class="qrcode-badge-info">
+                                    <span class="qrcode-badge-title"><i class="fas fa-qrcode"></i> Informações da Obra</span>
+                                    <span class="qrcode-badge-subtitle">Aponte a câmera</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="projeto-text">
                             <h3>Edifício Serra Mar</h3>
@@ -520,7 +527,13 @@
 
             <button class="slider-arrow next-arrow" id="next-projeto"><i class="fas fa-chevron-right"></i></button>
             
-            <div class="slider-dots" id="projetos-dots"></div>
+            <div class="slider-controls">
+                <div class="slider-dots" id="projetos-dots"></div>
+                <button class="slider-pause-btn" id="slider-pause-btn" aria-label="Pausar carrossel" title="Pausar / Retomar transição automática">
+                    <i class="fas fa-pause"></i>
+                    <span id="slider-pause-text">Pausar</span>
+                </button>
+            </div>
         </div>
         
         <!-- Marquee de Projetos -->

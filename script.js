@@ -224,10 +224,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prev-projeto');
     const nextBtn = document.getElementById('next-projeto');
     const dotsContainer = document.getElementById('projetos-dots');
+    const pauseBtn = document.getElementById('slider-pause-btn');
+    const pauseText = document.getElementById('slider-pause-text');
+    const sliderContainer = document.querySelector('.slider-container');
     
     if (sliderTrack && slides.length > 0) {
         let currentSlide = 0;
         let slideInterval;
+        let isManuallyPaused = false;
         
         // Create dots
         slides.forEach((_, index) => {
@@ -266,12 +270,51 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function startInterval() {
-            slideInterval = setInterval(nextSlide, 4000);
+            clearInterval(slideInterval);
+            if (!isManuallyPaused) {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
         }
         
         function resetInterval() {
             clearInterval(slideInterval);
-            startInterval();
+            if (!isManuallyPaused) {
+                startInterval();
+            }
+        }
+        
+        function updatePauseBtnUI(paused) {
+            if (!pauseBtn) return;
+            const icon = pauseBtn.querySelector('i');
+            if (paused) {
+                pauseBtn.classList.add('paused');
+                if (icon) icon.className = 'fas fa-play';
+                if (pauseText) pauseText.textContent = 'Continuar';
+                pauseBtn.setAttribute('title', 'Retomar rotação automática');
+                pauseBtn.setAttribute('aria-label', 'Retomar rotação automática');
+            } else {
+                pauseBtn.classList.remove('paused');
+                if (icon) icon.className = 'fas fa-pause';
+                if (pauseText) pauseText.textContent = 'Pausar';
+                pauseBtn.setAttribute('title', 'Pausar rotação automática');
+                pauseBtn.setAttribute('aria-label', 'Pausar rotação automática');
+            }
+        }
+        
+        function togglePause() {
+            if (isManuallyPaused) {
+                isManuallyPaused = false;
+                updatePauseBtnUI(false);
+                startInterval();
+            } else {
+                isManuallyPaused = true;
+                clearInterval(slideInterval);
+                updatePauseBtnUI(true);
+            }
+        }
+        
+        if (pauseBtn) {
+            pauseBtn.addEventListener('click', togglePause);
         }
         
         if (nextBtn) {
@@ -285,6 +328,19 @@ document.addEventListener('DOMContentLoaded', () => {
             prevBtn.addEventListener('click', () => {
                 prevSlide();
                 resetInterval();
+            });
+        }
+        
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => {
+                if (!isManuallyPaused) {
+                    clearInterval(slideInterval);
+                }
+            });
+            sliderContainer.addEventListener('mouseleave', () => {
+                if (!isManuallyPaused) {
+                    startInterval();
+                }
             });
         }
         
