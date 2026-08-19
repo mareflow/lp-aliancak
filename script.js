@@ -347,4 +347,36 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start auto play
         startInterval();
     }
+
+    // QR Code Modal Logic
+    const qrcodeModal = document.getElementById('qrcode-modal');
+    const openQrcodeBtn = document.getElementById('open-qrcode-modal');
+    const closeQrcodeBtn = document.getElementById('close-qrcode-modal');
+    const qrcodeOverlay = document.getElementById('qrcode-modal-overlay');
+
+    if (qrcodeModal && openQrcodeBtn) {
+        const openModal = () => {
+            qrcodeModal.classList.add('active');
+            qrcodeModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('no-scroll');
+        };
+
+        const closeModal = () => {
+            qrcodeModal.classList.remove('active');
+            qrcodeModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('no-scroll');
+        };
+
+        openQrcodeBtn.addEventListener('click', openModal);
+
+        if (closeQrcodeBtn) closeQrcodeBtn.addEventListener('click', closeModal);
+        if (qrcodeOverlay) qrcodeOverlay.addEventListener('click', closeModal);
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && qrcodeModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
 });

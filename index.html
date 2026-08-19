@@ -492,11 +492,15 @@
                     <div class="projeto-row">
                         <div class="projeto-img">
                             <img src="assets/Condominio-Edificio-Serra-Mar-Biguacu_SC.jpg" alt="Edifício Serra Mar">
-                            <div class="projeto-qrcode-badge">
-                                <img src="qrcode/QRCode-Edificio_Serra_Mar.png" alt="QR Code - Informações da Obra Edifício Serra Mar" class="qrcode-thumb">
+                            <div class="projeto-qrcode-badge" id="open-qrcode-modal" title="Clique para ampliar o QR Code">
+                                <div class="qrcode-wrapper">
+                                    <img src="qrcode/QRCode-Edificio_Serra_Mar.png" alt="QR Code - Informações da Obra Edifício Serra Mar" class="qrcode-thumb">
+                                    <span class="qrcode-expand-hint"><i class="fas fa-search-plus"></i> Ampliar</span>
+                                </div>
                                 <div class="qrcode-badge-info">
                                     <span class="qrcode-badge-title"><i class="fas fa-qrcode"></i> Informações da Obra</span>
-                                    <span class="qrcode-badge-subtitle">Aponte a câmera</span>
+                                    <span class="qrcode-badge-subtitle">Aponte a câmera para escanear</span>
+                                    <button type="button" class="qrcode-view-btn"><i class="fas fa-expand-alt"></i> Ampliar QR Code</button>
                                 </div>
                             </div>
                         </div>
@@ -688,6 +692,25 @@
     <a href="https://wa.me/5548984124110?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Aliança%20K%20Engenharia!" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Modal QR Code Ampliado -->
+    <div class="qrcode-modal" id="qrcode-modal" aria-hidden="true" role="dialog">
+        <div class="qrcode-modal-overlay" id="qrcode-modal-overlay"></div>
+        <div class="qrcode-modal-content animate-fade-up">
+            <button class="qrcode-modal-close" id="close-qrcode-modal" aria-label="Fechar Modal">&times;</button>
+            <div class="qrcode-modal-header">
+                <span class="modal-badge"><i class="fas fa-qrcode"></i> Informações da Obra</span>
+                <h3>Edifício Serra Mar</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Biguaçu - SC</p>
+            </div>
+            <div class="qrcode-modal-body">
+                <div class="qrcode-modal-img-wrap">
+                    <img src="qrcode/QRCode-Edificio_Serra_Mar.png" alt="QR Code Edifício Serra Mar Ampliado" class="qrcode-large-img">
+                </div>
+                <p class="qrcode-scan-help"><i class="fas fa-camera"></i> Aponte a câmera do seu celular para escanear</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
