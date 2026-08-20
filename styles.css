@@ -507,6 +507,36 @@ img {
     font-size: 1.2rem;
 }
 
+/* Sobre Section Dark Mode */
+.sobre.bg-dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.sobre.bg-dark .section-header h2 {
+    color: var(--text-light);
+}
+
+.sobre.bg-dark .lead {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sobre.bg-dark p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sobre.bg-dark .features-list li {
+    color: var(--text-light);
+}
+
+.sobre.bg-dark .btn-text {
+    color: var(--accent-color);
+}
+
+.sobre.bg-dark .btn-text:hover {
+    color: var(--accent-hover);
+}
+
 /* ==========================================================================
    Serviços Section
    ========================================================================== */
@@ -613,6 +643,27 @@ img {
     font-size: 1.1rem;
     color: var(--text-muted);
     line-height: 1.7;
+}
+
+/* Videos Section Dark Mode */
+.videos-section.bg-dark {
+    background-color: var(--bg-dark);
+}
+
+.videos-section.bg-dark .section-header h2 {
+    color: var(--text-light);
+}
+
+.videos-section.bg-dark .section-header p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.videos-section.bg-dark .video-text h3 {
+    color: var(--text-light);
+}
+
+.videos-section.bg-dark .video-text p {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 992px) {
